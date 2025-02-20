@@ -56,7 +56,21 @@ fn _maximum_sum(nums: Vec<i32>) -> i32 {
     ans
 }
 
-pub fn _min_operations(nums: Vec<i32>, k: i32) -> i32 {
-        
-        todo!()
+pub fn _min_operations(nums: Vec<i32>, k: i32) -> i32 {    
+    todo!()
+}
+
+pub fn find_different_binary_string(nums: Vec<String>) -> String {
+    let n = nums[0].as_bytes().len();
+    let mut output = String::with_capacity(n);
+
+    for (i, num) in nums.iter().enumerate() {
+        match num.as_bytes()[i] {
+            b'0' => { output.push('1'); }
+            b'1' => { output.push('0'); }
+            _ => {}
+        }
+    }
+
+    output
 }
